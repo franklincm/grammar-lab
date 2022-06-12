@@ -1,15 +1,21 @@
 %{
 #include <stdio.h>
+#include "dice.tab.h"
 %}
+
 %%
-" "				;
-[0-9]+			printf("Integer\n");
-"("				printf("LParen\n");
-")"				printf("RParen\n");
-[\+|-]			printf("AddOp");
-[\*|/]			printf("MulOp\n");
-(=|<|>|>=|<=)	printf("RelOp\n");
-min				printf("MinF\n");
-max				printf("MaxF\n");
-count			printf("countf\n");
+
+[ \t ]			;
+\n				return NEWLINE;
+[d|D]			return D;
+[0-9]+			return INT;
+"("				return LPAREN;
+")"				return RPAREN;
+[\+|-]			return ADDOP;
+[\*|/]			return MULOP;
+(=|<|>|>=|<=)	return RELOP;
+min				return MINF;
+max				return MAXF;
+count			return COUNT;
+
 %%
