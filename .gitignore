@@ -2,4 +2,3 @@ lex.yy.c
 bin/
 dice.tab.c
 dice.tab.h
-dice.y
