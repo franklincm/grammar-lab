@@ -50,7 +50,7 @@ factor:
 ;
 
 factor_t:
-		|D INT
+		|D INT { printf("dice\n"); }
 ;
 
 %%
