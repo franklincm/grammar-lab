@@ -25,11 +25,7 @@ line:
 ;
 
 expr:
-	simple_expr repeat
-;
-
-repeat:
-	  LPAREN INT RPAREN
+	simple_expr
 ;
 
 simple_expr:
